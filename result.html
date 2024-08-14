@@ -14,7 +14,7 @@
     </style>
   </head>
   <body>
-    <h1 style="color:green">🥳Hasil Kuis Anda🥳</h1>
+    <h1 style="color: green">🥳Hasil Kuis Anda🥳</h1>
     <p id="score"></p>
 
     <script>
@@ -46,10 +46,31 @@
         points = 0;
       }
 
+      function decodeBase64(str) {
+        return decodeURIComponent(escape(atob(str)));
+      }
+
+      // Get URL parameters
+      function getQueryParams() {
+        let params = {};
+        let queryString = window.location.search.substring(1);
+        let pairs = queryString.split("&");
+        pairs.forEach((pair) => {
+          let [key, value] = pair.split("=");
+          params[decodeURIComponent(key)] = decodeURIComponent(value);
+        });
+        return params;
+      }
+
+      // Get the query parameters
+      let params = getQueryParams();
+      let encryptedName = params.name;
+      let name = decodeBase64(encryptedName);
+
       // Menampilkan hasil poin
       document.getElementById(
         "score"
-      ).textContent = `Selamat Anda Mendapatkan ${points} poin`; // sesuaikan maksimal poin sesuai jumlah pertanyaan
+      ).textContent = `Selamat ${name} Mendapatkan ${points} poin`; // sesuaikan maksimal poin sesuai jumlah pertanyaan
     </script>
   </body>
 </html>
