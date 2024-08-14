@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Kuis</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hasil Kuis Anda</h1>
+    <p id="score"></p>
+
+    <script>
+      // Mendapatkan nilai poin dari URL
+      const urlParams = new URLSearchParams(window.location.search);
+      let points = 0;
+      const get = urlParams.get("res");
+      if (get == "bxjgshjhhjka") {
+        points = 10;
+      } else if (get == "asdfhlkgjtio") {
+        points = 20;
+      } else if (get == "pqetdasdfhjk") {
+        points = 30;
+      } else if (get == "sadftygohjko") {
+        points = 40;
+      } else if (get == "ssadfkhjkjkg") {
+        points = 50;
+      } else if (get == "qwuiertsfasf") {
+        points = 60;
+      } else if (get == "ooqrtyigdsfk") {
+        points = 70;
+      } else if (get == "wquygdshjkha") {
+        points = 80;
+      } else if (get == "yiqwyuruiohn") {
+        points = 90;
+      } else if (get == "asgjkfsdgjks") {
+        points = 100;
+      } else {
+        points = 0;
+      }
+
+      // Menampilkan hasil poin
+      document.getElementById(
+        "score"
+      ).textContent = `Selamat Anda Mendapatkan ${points} poin`; // sesuaikan maksimal poin sesuai jumlah pertanyaan
+    </script>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecart Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #4c99af;
+            font-size: 25px;
+        }
+        #timer {
+            font-size: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 2px solid #4c99af;
+            border-radius: 5px;
+            color: black;
+            text-align: center;
+            width: 100px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .answer {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .answer:hover {
+            border-color: #888;
+        }
+        .answer input[type="radio"] {
+            display: none;
+        }
+        .answer.selected {
+            border-color: #75c3d9;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            color: white;
+            background-color: #28a745;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="tecart-png1.png" alt="" height="30" width="30">
+        <div id="timer">3:00</div>
+    </div>
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. Apa kepanjangan dari HTTP?</h3>
+            <label class="answer">
+                <input type="radio" name="q1" value="0"> Hyper Text Transfer Protocol
+            </label>
+            <label class="answer">
+                <input type="radio" name="q1" value="0"> Hyper Transfer Text Protocol
+            </label>
+            <label class="answer">
+                <input type="radio" name="q1" value="10"> Hypertext Transfer Protocol
+            </label>
+            <label class="answer">
+                <input type="radio" name="q1" value="0"> Hypertext Transfer Procedure
+            </label>
+        </div>
+        
+        <div class="question">
+            <h3>2. Apa kepanjangan dari CPU?</h3>
+            <label class="answer">
+                <input type="radio" name="q2" value="10"> Central Processing Unit
+            </label>
+            <label class="answer">
+                <input type="radio" name="q2" value="0"> Central Program Unit
+            </label>
+            <label class="answer">
+                <input type="radio" name="q2" value="0"> Computer Program Unit
+            </label>
+            <label class="answer">
+                <input type="radio" name="q2" value="0"> Computer Processor Unit
+            </label>
+        </div>
+        
+        <div class="question">
+            <h3>3. Apa kepanjangan dari WWW?</h3>
+            <label class="answer">
+                <input type="radio" name="q3" value="0"> Web World Wide
+            </label>
+            <label class="answer">
+                <input type="radio" name="q3" value="0"> Web Wide World
+            </label>
+            <label class="answer">
+                <input type="radio" name="q3" value="10"> World Wide Web
+            </label>
+            <label class="answer">
+                <input type="radio" name="q3" value="0"> Wide World Web
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>4. Apa browser bawaan dari Windows?</h3>
+            <label class="answer">
+                <input type="radio" name="q4" value="0"> Google Chrome
+            </label>
+            <label class="answer">
+                <input type="radio" name="q4" value="0"> Mozilla Firefox
+            </label>
+            <label class="answer">
+                <input type="radio" name="q4" value="0"> Safari
+            </label>
+            <label class="answer">
+                <input type="radio" name="q4" value="10"> Microsoft Edge
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>5. Dari pilihan berikut manakah yang bukan merupakan Operating System (OS)?</h3>
+            <label class="answer">
+                <input type="radio" name="q5" value="0"> DOS
+            </label>
+            <label class="answer">
+                <input type="radio" name="q5" value="0"> Windows
+            </label>
+            <label class="answer">
+                <input type="radio" name="q5" value="0"> Linux
+            </label>
+            <label class="answer">
+                <input type="radio" name="q5" value="10"> DDOS
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>6. Konsep yang berfokus kepada pengalaman pengguna saat berinteraksi atau menggunakan produk atau layanan disebut juga dengan?</h3>
+            <label class="answer">
+                <input type="radio" name="q6" value="0"> User Interface
+            </label>
+            <label class="answer">
+                <input type="radio" name="q6" value="0"> User Persona
+            </label>
+            <label class="answer">
+                <input type="radio" name="q6" value="0"> User Journey
+            </label>
+            <label class="answer">
+                <input type="radio" name="q6" value="10"> User Experience
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>7. Internet pertama kali dibuat untuk bidang apa?</h3>
+            <label class="answer">
+                <input type="radio" name="q7" value="0"> Komunikasi
+            </label>
+            <label class="answer">
+                <input type="radio" name="q7" value="0"> Pertanian
+            </label>
+            <label class="answer">
+                <input type="radio" name="q7" value="0"> Pendidikan
+            </label>
+            <label class="answer">
+                <input type="radio" name="q7" value="10"> Militer
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>8. LAN merupakan singkatan dari?</h3>
+            <label class="answer">
+                <input type="radio" name="q8" value="10"> Local Area Network
+            </label>
+            <label class="answer">
+                <input type="radio" name="q8" value="0"> Linear Area Network
+            </label>
+            <label class="answer">
+                <input type="radio" name="q8" value="0"> Long Area Network
+            </label>
+            <label class="answer">
+                <input type="radio" name="q8" value="0"> Large Area Network
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>9. IP merupakan singkatan dari?</h3>
+            <label class="answer">
+                <input type="radio" name="q9" value="0"> Internet Physical
+            </label>
+            <label class="answer">
+                <input type="radio" name="q9" value="0"> Internet Program
+            </label>
+            <label class="answer">
+                <input type="radio" name="q9" value="10"> Internet Protocol
+            </label>
+            <label class="answer">
+                <input type="radio" name="q9" value="0"> Internet Process
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>10. Dari pilihan di bawah ini manakah yang bukan merupakan bahasa pemrograman?</h3>
+            <label class="answer">
+                <input type="radio" name="q10" value="0"> Java
+            </label>
+            <label class="answer">
+                <input type="radio" name="q10" value="10"> HTML
+            </label>
+            <label class="answer">
+                <input type="radio" name="q10" value="0"> C
+            </label>
+            <label class="answer">
+                <input type="radio" name="q10" value="0"> Python
+            </label>
+        </div>
+
+        <button type="submit">Kirim Jawaban</button>
+    </form>
+
+    <script>
+        let timeLeft = 180; // Waktu dalam detik (5 menit)
+        let timerElement = document.getElementById('timer');
+    
+        // Format untuk menampilkan waktu dalam menit dan detik
+        function formatTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let secs = seconds % 60;
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+    
+        // Timer countdown
+        const countdown = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                submitQuiz(); // Submit kuis ketika waktu habis
+            } else {
+                timerElement.textContent = `${formatTime(timeLeft)}`;
+                timeLeft--;
+            }
+        }, 1000);
+    
+        // Event listener untuk outline biru pada pilihan yang dipilih
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(question => {
+            const answers = question.querySelectorAll('.answer');
+            answers.forEach(answer => {
+                answer.addEventListener('click', function() {
+                    // Remove 'selected' class from all answers in the current question
+                    answers.forEach(ans => ans.classList.remove('selected'));
+                    // Add 'selected' class to the clicked answer
+                    this.classList.add('selected');
+                    this.querySelector('input[type="radio"]').checked = true;
+                });
+            });
+        });
+    
+        // Submit form ketika waktu habis atau tombol submit diklik
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            submitQuiz();
+        });
+    
+        function submitQuiz() {
+            let form = document.forms['quizForm'];
+            let totalPoints = 0;
+            let encryptnilai = "";
+            
+            // Loop untuk menghitung poin dari setiap jawaban
+            for (let i = 1; i <= 10; i++) { // sesuaikan jumlah pertanyaan
+                let answer = form['q' + i];
+                for (let j = 0; j < answer.length; j++) {
+                    if (answer[j].checked) {
+                        totalPoints += parseInt(answer[j].value);
+                    }
+                }
+            }
+
+            if (totalPoints == 10) {
+                encryptnilai = "bxjgshjhhjka";
+            } else if(totalPoints == 20){
+                encryptnilai = "asdfhlkgjtio";
+            }else if(totalPoints == 30){
+                encryptnilai = "pqetdasdfhjk";
+            }else if(totalPoints == 40){
+                encryptnilai = "sadftygohjko";
+            }else if(totalPoints == 50){
+                encryptnilai = "ssadfkhjkjkg";
+            }else if(totalPoints == 60){
+                encryptnilai = "qwuiertsfasf";
+            }else if(totalPoints == 70){
+                encryptnilai = "ooqrtyigdsfk";
+            }else if(totalPoints == 80){
+                encryptnilai = "wquygdshjkha";
+            }else if(totalPoints == 90){
+                encryptnilai = "yiqwyuruiohn";
+            }else if(totalPoints == 100){
+                encryptnilai = "asgjkfsdgjks";
+            }else{
+                encryptnilai = "itwuqybjlsdf";
+            }
+    
+            // Redirect ke halaman hasil dengan mengirimkan poin melalui URL
+            window.location.href = `result.html?res=${encryptnilai}`;
+        }
+    </script>
+    
+</body>
+</html>
